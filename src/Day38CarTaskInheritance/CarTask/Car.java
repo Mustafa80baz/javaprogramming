@@ -17,10 +17,10 @@ public class Car {
         this.mies = mies;
     }
     public void start(){
-        System.out.println(brand+" "+"is starting");
+        System.out.println(brand+" "+model+" is starting");
     }
     public void drive(){
-        System.out.println(brand+" "+" is driving");
+        System.out.println(brand+" "+model+"  is driving");
     }
 
     public String toString() {
