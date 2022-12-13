@@ -1,0 +1,34 @@
+package Day31Constructor;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class PizzaObjectOrdering {
+    public static void main(String[] args) {
+        //crate 100 pizza: s : cheese topp:2 pepronı:3
+        //crate 100 pizza: M : cheese topp:3 pepronı:4
+        //crate 100 pizza: L : cheese topp:4 pepronı:5
+        ArrayList<Pizza>pizzas=new ArrayList<>();
+        for (int i = 0; i <100 ; i++) {//300 adet yaptık
+            Pizza small=new Pizza('S',2,3);
+            Pizza medium=new Pizza('M',3,4);
+            Pizza large=new Pizza('L',4,5);
+            pizzas.addAll(Arrays.asList(small,medium,large));
+
+        }
+        System.out.println("Total number of pizzas : "+pizzas.size());//pizza sayısı
+        double totalPrice=0;
+        for (Pizza pizza : pizzas) {
+            totalPrice+= pizza.doublecalCost();
+
+        }
+
+        System.out.println("totalPrice="+totalPrice);
+
+
+        }
+
+
+        }
+
+
