@@ -1,14 +1,42 @@
 package Day38CarTaskInheritance.ShapeTask;
 
 public class Circle extends Shape {
-    public Circle(String name) {
-        super(name);
+private double radius;
+public static double pi;
+
+     public double getRadius() {
+        return radius;
+    }
+    public void setRadius(double radius) {
+        if (radius<=0){
+            System.out.println("Inalid radius");
+            System.exit(1);
+        }
+        this.radius = radius;
     }
 
-    public static void main(String[] args) {
-        Circle circle=new Circle("circule");
+    public Circle( double radius) {
+        super("Circle");
+        setRadius(radius);
     }
-    public void r(){
 
+    @Override
+    public double area() {
+        return radius*radius*pi;
+    }
+
+    @Override
+    public double perimeter() {
+        return 2*radius*pi;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ",pi='" + pi + '\'' +
+                ",area='" + area() + '\'' +
+                ",perimater='" + perimeter() + '\'' +
+                '}';
     }
 }
